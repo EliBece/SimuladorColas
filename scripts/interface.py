@@ -30,7 +30,7 @@ import customtkinter as ctk
 from customtkinter import CTkImage
 from matplotlib.figure import Figure
 import tkinter.messagebox as messagebox
-from utils import mm1_metrics, mms_metrics
+from utils import mm1_metrics, mmc_metrics
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 
@@ -227,7 +227,7 @@ class SimuladorColas(ctk.CTk):
             
             if self.modelo_var.get() == "MMc":
                 s = int(self.s_entry.get())
-                resultado = mms_metrics(lambd, mu, s, n_max)
+                resultado = mmc_metrics(lambd, mu, s, n_max)
             else:
                 resultado = mm1_metrics(lambd, mu, n_max)
 
