@@ -20,7 +20,7 @@
 # SOFTWARE.
 
 # ====================================================================================================
-# INTERFAZ [MODELO MM1 - MMS MARKOVIANO]
+# INTERFAZ [MODELO MM1 - MMc MARKOVIANO]
 # ====================================================================================================
 
 import os
@@ -113,7 +113,7 @@ class SimuladorColas(ctk.CTk):
 
         ctk.CTkLabel(opciones_grid, text="Modelo:", font=ctk.CTkFont(size=14)).grid(row=0, column=0, padx=10, pady=5, sticky="w")
         ctk.CTkRadioButton(opciones_grid, text="MM1", variable=self.modelo_var, value="MM1").grid(row=0, column=1, padx=10, pady=5, sticky="w")
-        ctk.CTkRadioButton(opciones_grid, text="MMS", variable=self.modelo_var, value="MMS").grid(row=0, column=2, padx=10, pady=5, sticky="w")
+        ctk.CTkRadioButton(opciones_grid, text="MMc", variable=self.modelo_var, value="MMc").grid(row=0, column=2, padx=10, pady=5, sticky="w")
 
         ctk.CTkLabel(opciones_grid, text="Unidad de tiempo:", font=ctk.CTkFont(size=14)).grid(row=1, column=0, padx=10, pady=5, sticky="w")
         ctk.CTkRadioButton(opciones_grid, text="Horas", variable=self.unidad_tiempo_var, value="horas").grid(row=1, column=1, padx=10, pady=5, sticky="w")
@@ -128,7 +128,7 @@ class SimuladorColas(ctk.CTk):
         self.lambda_label, self.lambda_entry = self._crear_entrada(self.frame_entradas, "Tasa de llegada (λ):", row=1)
         self.mu_label, self.mu_entry = self._crear_entrada(self.frame_entradas, "Tasa de servicio (μ):", row=2)
         self.n_label, self.n_entry = self._crear_entrada(self.frame_entradas, "Probabilidades n-ésimas:", row=3)
-        self.s_label, self.s_entry = self._crear_entrada(self.frame_entradas, "Número de servidores (s):", row=4)
+        self.s_label, self.s_entry = self._crear_entrada(self.frame_entradas, "Número de servidores (c):", row=4)
         ctk.CTkLabel(self.frame_entradas, text="").grid(row=5, column=0, columnspan=2, pady=3)
 
         self.s_label.grid_remove()
@@ -212,7 +212,7 @@ class SimuladorColas(ctk.CTk):
 
         return {"label": label, "valor": valor}
 
-    # calcular: Obtiene los datos ingresados, calcula las métricas del modelo seleccionado (MM1 o MMS), y muestra los resultados y la gráfica.
+    # calcular: Obtiene los datos ingresados, calcula las métricas del modelo seleccionado (MM1 o MMc), y muestra los resultados y la gráfica.
     def calcular(self):
         self.boton_calcular.configure(state="disabled", text="Calculando...")
 
@@ -225,7 +225,7 @@ class SimuladorColas(ctk.CTk):
             mu = float(self.mu_entry.get())
             n_max = int(self.n_entry.get())
             
-            if self.modelo_var.get() == "MMS":
+            if self.modelo_var.get() == "MMc":
                 s = int(self.s_entry.get())
                 resultado = mms_metrics(lambd, mu, s, n_max)
             else:
