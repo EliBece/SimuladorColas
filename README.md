@@ -1,4 +1,4 @@
-# Simulador de Colas Markoviano - [M/M/1 - M/M/s]
+# Simulador de Colas Markoviano - [M/M/1 - M/M/c]
 
 ## 🚨 Licencia
 Este proyecto está licenciado bajo la Licencia MIT.  
@@ -10,14 +10,14 @@ Consulta el archivo [LICENSE](./LICENSE) para más información.
 
 👉 **¿Solo quieres probar el programa sin leer todo?:** Dirígete al final de esta lectura.
 
-Este proyecto fue desarrollado como parte del curso de **Simulación** y tiene como objetivo implementar, analizar y visualizar el comportamiento de sistemas de colas bajo los modelos **M/M/1** y **M/M/s**. El programa permite calcular métricas clave como el número promedio de clientes en el sistema (Ls), en la cola (Lq), el tiempo promedio en el sistema (Ws), el tiempo en la cola (Wq), la probabilidad de que el sistema esté vacío (P₀), entre otras.
+Este proyecto fue desarrollado como parte del curso de **Simulación** y tiene como objetivo implementar, analizar y visualizar el comportamiento de sistemas de colas bajo los modelos **M/M/1** y **M/M/c**. El programa permite calcular métricas clave como el número promedio de clientes en el sistema (Ls), en la cola (Lq), el tiempo promedio en el sistema (Ws), el tiempo en la cola (Wq), la probabilidad de que el sistema esté vacío (P₀), entre otras.
 
 <div style="text-align:center;">
   <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXk0ZnlzbTlsenBkYjQ2NzV3NmQ1cWhyNzAzdTgzczl1dndqdmp3NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/citBl9yPwnUOs/giphy.gif">
 </div>
 
 ## ✅ Características principales
-- Soporta análisis para **M/M/1** (una sola cola, un servidor) y **M/M/s** (una sola cola, varios servidores).
+- Soporta análisis para **M/M/1** (una sola cola, un servidor) y **M/M/c** (una sola cola, varios servidores).
 - Interfaz gráfica de consola para introducir parámetros fácilmente.
 - Validación de datos de entrada para evitar errores en la simulación.
 - Resultados claros y bien organizados.
