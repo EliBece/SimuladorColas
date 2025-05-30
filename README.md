@@ -1,5 +1,11 @@
 # Simulador de Colas Markoviano - [M/M/1 - M/M/s]
 
+## 🚨 Licencia
+Este proyecto está licenciado bajo la Licencia MIT.  
+Consulta el archivo [LICENSE](./LICENSE) para más información.
+
+## 🌱 Descripción del Proyecto
+
 **Nombre del Proyecto: Simulador de Teoría de Colas Markoviano**
 
 👉 **¿Solo quieres probar el programa sin leer todo?:** Dirígete al final de esta lectura.
