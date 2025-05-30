@@ -106,7 +106,7 @@ class SimuladorColas(ctk.CTk):
 
         self.lambda_label, self.lambda_entry = self._crear_entrada(self.frame_entradas, "Tasa de llegada (λ):", row=1)
         self.mu_label, self.mu_entry = self._crear_entrada(self.frame_entradas, "Tasa de servicio (μ):", row=2)
-        self.n_label, self.n_entry = self._crear_entrada(self.frame_entradas, "Número de probabilidades:", row=3)
+        self.n_label, self.n_entry = self._crear_entrada(self.frame_entradas, "Probabilidades n-ésimas:", row=3)
         self.s_label, self.s_entry = self._crear_entrada(self.frame_entradas, "Número de servidores (s):", row=4)
         ctk.CTkLabel(self.frame_entradas, text="").grid(row=5, column=0, columnspan=2, pady=3)
 
@@ -168,7 +168,7 @@ class SimuladorColas(ctk.CTk):
         frame_prob = ctk.CTkFrame(self.scrollable_frame_resultados, corner_radius=10)
         frame_prob.pack(padx=10, pady=10, fill="x")
 
-        ctk.CTkLabel(frame_prob, text="Probabilidades (Pₙ)", font=ctk.CTkFont(size=18, weight="bold"), anchor="w").pack(padx=10, pady=5, fill="x")
+        ctk.CTkLabel(frame_prob, text="Probabilidades n-ésimas (Pₙ)", font=ctk.CTkFont(size=18, weight="bold"), anchor="w").pack(padx=10, pady=5, fill="x")
 
         self.prob_text = ctk.CTkTextbox(frame_prob, height=150, font=ctk.CTkFont(size=14))
         self.prob_text.pack(padx=10, pady=5, fill="x")
