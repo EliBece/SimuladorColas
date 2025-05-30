@@ -20,7 +20,7 @@
 # SOFTWARE.
 
 # =================================================================================
-# TEORIA DE COLAS [MODELO MM1 - MMS]
+# TEORIA DE COLAS [MODELO MM1 - MMc]
 # =================================================================================
 # Este programa tiene como objetivo realizar lo siguiente:
 #   - Indicar al usuario que modelo desea trabajar.
@@ -60,9 +60,9 @@ def mm1_metrics(lambd, mu, n_max):
     }
 
 # ====================================================================================================
-# MODELO MMS METRICAS
+# MODELO MMc METRICAS
 # ====================================================================================================
-def mms_metrics(lambd, mu, s, n_max):
+def mmc_metrics(lambd, mu, s, n_max):
     rho = lambd / (s * mu)
 
     if rho >= 1:
@@ -109,11 +109,11 @@ def plot_probabilities(Pn):
 # def main():
 #     print("\n\n")
 #     print("------------------------------------------------------------")
-#     print("               Teoría de Colas: MM1 o MMS                   ")
+#     print("               Teoría de Colas: MM1 o MMc                   ")
 #     print("------------------------------------------------------------")
 #     print(">> Bienvenido a la Teoría de Colas...\n\n")
 #     print("  - Para seleccionar un modelo tipo MM1 escriba 'MM1'.")
-#     print("  - Para seleccionar un modelo tipo MMS escriba 'MMS'.")
+#     print("  - Para seleccionar un modelo tipo MMc escriba 'MMc'.")
 #     print("  - Debe colocar los valores por hora o minutos según corresponda.")
 #     print("  - Requerimos saber el valor de λ, μ y el número de probabilidades a calcular.\n\n")
 
@@ -124,12 +124,12 @@ def plot_probabilities(Pn):
 #             print("\nERROR: Unidad no válida. Usa 'horas' o 'minutos'.")
 #             return
 
-#         model = input("   >> Selecciona el modelo (MM1 o MMS): ").strip().upper()
+#         model = input("   >> Selecciona el modelo (MM1 o MMc): ").strip().upper()
 #         lambd = float(input(f"   >> Ingrese la Tasa de Llegada λ (clientes/{unidad_tiempo}): "))
 #         mu = float(input(f"   >> Ingrese la Tasa de Servicio μ (clientes/{unidad_tiempo}): "))
-#         n_max = int(input("   >> ¿Cuántas probabilidades P_n deseas calcular?: "))
+#         n_max = int(input("   >> ¿Cuántas probabilidades P_n deseas calcular (probabilidades n-ésimas)?: "))
         
-#         if model == "MMS":
+#         if model == "MMc":
 #             s = int(input("   >> Ingrese el número de servidores s: "))
 #         else:
 #             s = None
@@ -139,10 +139,10 @@ def plot_probabilities(Pn):
 
 #     if model == "MM1":
 #         result = mm1_metrics(lambd, mu, n_max)
-#     elif model == "MMS":
-#         result = mms_metrics(lambd, mu, s, n_max)
+#     elif model == "MMc":
+#         result = mmc_metrics(lambd, mu, s, n_max)
 #     else:
-#         print("\nERROR: Modelo no reconocido. Usa MM1 o MMS.")
+#         print("\nERROR: Modelo no reconocido. Usa MM1 o MMc.")
 #         return
 
 #     if isinstance(result, str):
