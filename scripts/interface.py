@@ -161,7 +161,7 @@ class SimuladorColas(ctk.CTk):
     def actualizar_campos(self, *args):
         modelo = self.modelo_var.get()
 
-        if modelo == "MMS":
+        if modelo == "MMc":
             self.s_label.grid()
             self.s_entry.grid()
         else:
